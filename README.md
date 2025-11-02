@@ -76,11 +76,13 @@ Adaptive control strategy refinement
 
 🛠 Technical Architecture
 Core AI Services (100% Google Cloud)
-![mermaid-diagram (2)](https://github.com/user-attachments/assets/19d8e27f-f34e-4093-8cf2-b0eca2801c6a)
+<img width="1024" height="1024" alt="image (13)" src="https://github.com/user-attachments/assets/12a723af-0367-4a12-abe0-e8748a2145e5" />
+
 
 8 BQML Models (BigQuery ML)
 
-![mermaid-diagram (3)](https://github.com/user-attachments/assets/b3ed4c20-40f8-4605-bc4e-5ab165d58665)
+<img width="946" height="473" alt="Screenshot 2025-11-02 184115" src="https://github.com/user-attachments/assets/7ede011b-20ee-45f3-8cf8-47f242e520b8" />
+
 
 energy_regressor - Energy consumption prediction & optimization
 quality_predictor - Cement quality prediction (Blaine, strength, LSF/SM/AM)
@@ -123,7 +125,8 @@ ORDER BY
   model_name;
 
 Data Flow Architecture
-![mermaid-diagram (3)](https://github.com/user-attachments/assets/60fe1a16-c339-4495-985a-ce4a445fe42e)
+<img width="1024" height="1024" alt="image (11)" src="https://github.com/user-attachments/assets/7a804939-cab8-463d-b5dd-c23dba2a305a" />
+
 
 Business Impact & Technical KPIs
 Proven Results
@@ -165,6 +168,7 @@ Traditional vs. CementAI Approach
 
 
 
+<img width="4096" height="4096" alt="image (8)" src="https://github.com/user-attachments/assets/ffb5bfe5-6290-4e9e-8176-82bf68f59101" />
 
 
 

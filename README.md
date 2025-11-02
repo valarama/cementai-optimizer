@@ -295,9 +295,166 @@ Traditional vs. CementAI Approach
 <img width="1187" height="884" alt="mermaid-diagram-2025-11-02-201411" src="https://github.com/user-attachments/assets/b0a0d884-9e0f-493e-90c6-c7abf54d3885" />
 
 
+### **3. Deploy Frontend (Next.js)**
+```bash
+cd ../frontend
+# Replace page.tsx with the FIXED version
+# Then deploy:
+gcloud builds submit --config=cloudbuild-frontend.yaml .
+```
 
+### **4. Access the Dashboard**
 
+- **Frontend:** `https://cementai-frontend-[PROJECT_ID].run.app`
+- **Backend API:** `https://cementai-backend-[PROJECT_ID].run.app`
 
+---
+
+## 📋 API Endpoints
+
+### **Core Prediction Endpoint**
+```bash
+POST /api/predict-comprehensive
+Content-Type: application/json
+
+{
+  "feed_rate_tph": 850,
+  "kiln_outlet_temp_c": 1420,
+  "mill_power_kw": 4200,
+  "tsr_pct": 48
+}
+```
+
+**Response:** Predictions from all 8 BQML models + AI recommendations + total savings
+
+---
+
+### **Gemini Chat Endpoint**
+```bash
+POST /api/chat
+Content-Type: application/json
+
+{
+  "message": "How can I reduce energy consumption?",
+  "context": { "current_predictions": {...} }
+}
+```
+
+---
+
+### **Health & Status**
+```bash
+GET /health
+GET /api/plant-status
+GET /api/models/status
+```
+
+---
+
+## 💾 Project Structure
+```
+cementai-optimizer/
+├── frontend/              # Next.js dashboard
+│   ├── src/app/page.tsx  # Main UI component (FIXED VERSION)
+│   ├── Dockerfile
+│   └── cloudbuild-frontend.yaml
+├── backend/               # FastAPI + BQML
+│   ├── main.py           # 8 BQML models + Gemini integration
+│   ├── requirements.txt
+│   └── cloudbuild.yaml
+├── deployment/            # Infrastructure
+│   └── terraform/
+└── README.md             # This file
+```
+
+---
+
+## 🎓 Technologies Used
+
+### **Google Cloud AI Stack**
+
+- **Gemini Pro 2.0 Flash:** Multimodal AI for process understanding & reasoning
+- **Vertex AI:** Custom ML models for plant-specific optimization
+- **BigQuery ML:** 8 production-ready BQML models
+- **Agent Builder:** Autonomous decision-making agents
+- **Cloud Vision API:** Equipment monitoring & quality control
+
+### **Data & Infrastructure**
+
+- **Pub/Sub:** Real-time sensor data streaming
+- **Dataflow:** Stream processing & transformation
+- **BigQuery:** Petabyte-scale analytics
+- **Cloud Storage:** Data lake for historical analysis
+- **Cloud Run:** Serverless deployment (backend + frontend)
+
+### **Security & Monitoring**
+
+- **IAM:** Role-based access control
+- **Cloud Logging:** Comprehensive audit trails
+- **Cloud Monitoring:** Real-time system health
+
+---
+
+## 🌐 Market Opportunity
+
+- 🏭 **Global Cement Market:** $400B+ with high energy intensity
+- 🌍 **Carbon Pressure:** Net-zero urgency worldwide
+- 📈 **Digital Transformation:** Industry primed for AI adoption
+- 💰 **Energy Savings:** 15-25% = millions saved per plant
+
+---
+
+## 👥 Team: Agentic Architects
+
+**Team Lead:** Ramamurthy Valavandan  
+**Email:** ramamurthy.valavandan@mastechdigital.com
+
+---
+
+## 📄 License & Usage
+
+This project is submitted for the **Google Cloud Gen AI Exchange Hackathon 2025**.  
+© 2025 Agentic Architects. All rights reserved.
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to:
+- Google Cloud team for Gen AI Exchange Hackathon platform
+- Cement industry experts for domain guidance
+- Hack2Skill for organizing this innovation challenge
+
+---
+
+## 📞 Contact & Support
+
+For questions, partnerships, or pilot deployments:
+
+- 📧 **Email:** ramamurthy.valavandan@mastechdigital.com
+- 🔗 **LinkedIn:** [Connect with team]
+- 🌐 **Website:** [Coming soon]
+
+---
+
+<div align="center">
+
+**Built with ❤️ using Google Cloud Gen AI**
+
+**#GenAI #GoogleCloud #GeminiPro #VertexAI #IndustrialAI #CementIndustry #Sustainability #SmartManufacturing #Hackathon #AIForGood**
+
+[![Star on GitHub](https://img.shields.io/github/stars/valarama/cementai-optimizer?style=for-the-badge)](https://github.com/valarama/cementai-optimizer)
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/i5OKUtKLcIw)
+
+**⭐ Star this repo if you found it helpful!**
+
+</div>
+
+---
+
+**Last Updated:** November 2, 2025  
+**Version:** 1.0.0  
+**Status:** Hackathon Submission - Prototype Phase
 
 
 

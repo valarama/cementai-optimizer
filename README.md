@@ -246,7 +246,8 @@ Plant Sensors → Edge Gateway → Pub/Sub → Dataflow → BigQuery
                                               Control System Write-Back
 ```
 
----
+---<img width="664" height="321" alt="Screenshot 2025-11-02 203359" src="https://github.com/user-attachments/assets/e756de83-222c-4c06-a69a-49b3933b7578" />
+
 
 ## 📊 Business Impact & KPIs
 
@@ -276,7 +277,8 @@ Plant Sensors → Edge Gateway → Pub/Sub → Dataflow → BigQuery
 - ♻️ **TSR Increase:** +5-10 percentage points
 - 🌱 **Renewable Integration:** Optimized biomass usage
 
----
+---<img width="758" height="477" alt="Screenshot 2025-11-02 203423" src="https://github.com/user-attachments/assets/6fd32e9f-f64b-48cb-89ea-d8d7a9ec631d" />
+
 
 ## 🔬 8 BQML Models
 
@@ -294,6 +296,7 @@ Our solution uses **8 production-ready BigQuery ML models** for real-time optimi
 | 6️⃣ | `heat_loss_regressor` | Linear Reg | Stack/cooler heat loss | 10-20°C reduction |
 | 7️⃣ | `mill_optimizer` | Boosted Tree | Grinding circuit optimization | 15% energy ↓ |
 | 8️⃣ | `throughput_forecaster` | ARIMA Plus | Production rate forecasting | +8.5% TPH |
+<img width="1187" height="884" alt="mermaid-diagram-2025-11-02-201411" src="https://github.com/user-attachments/assets/1d249957-aa5d-4439-9b51-4d1b90255535" />
 
 ### Example: Energy Regressor Model
 ```sql

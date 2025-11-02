@@ -45,6 +45,7 @@ Cement plants are among the most energy-intensive industries globally, facing cr
 - 🏭 **Siloed Control Systems:** Isolated process monitoring prevents holistic optimization
 - ♻️ **Alternative Fuel Integration:** Limited thermal substitution rates (TSR) due to combustion complexity
 - 🌍 **Sustainability Pressure:** Cement industry contributes 5-8% of global CO₂ emissions
+<img width="4096" height="4096" alt="image (2)" src="https://github.com/user-attachments/assets/35ba8dda-babb-4957-94d8-c457a464a7a8" />
 
 ### What Makes This Hard?
 Traditional cement plant control systems are **reactive and rule-based**, operating in silos across:
@@ -191,6 +192,7 @@ CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 - Plant-specific performance optimization
 - Historical data pattern recognition
 - Adaptive control strategy refinement
+![Uploading img1.jpg…]()
 
 ---
 

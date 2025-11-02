@@ -2,7 +2,7 @@ markdown#
 🏭 CementAI Optimizer
 **World's First Generative AI Platform for Autonomous Cement Plant Operations**
 
-[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/i5OKUtKLcIw)
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=cY9mLeCcyJI)
 [![Live Prototype](https://img.shields.io/badge/Live-Prototype-blue?style=for-the-badge)](https://valarama.github.io/cementai-optimizer/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/valarama/cementai-optimizer)
 

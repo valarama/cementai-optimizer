@@ -118,10 +118,9 @@ gcloud builds submit --config=cloudbuild-frontend.yaml .
 
 ---
 
-## 🏆 YOU'RE READY TO SUBMIT!
+## 🏆 WE'RE READY TO SUBMIT!
 
 **Team:** Agentic Architects  
 **Lead:** Ramamurthy Valavandan  
 **Hackathon:** Google Cloud Gen AI Exchange 2025
 
-**Go win this! 🚀**

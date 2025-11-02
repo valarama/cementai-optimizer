@@ -2,20 +2,26 @@
 World's First Generative AI Platform for Autonomous Cement Plant Operations
 
 
+## 📑 Table of Contents
 
-🌟 Live Demo
-🔗 Prototype: https://valarama.github.io/cementai-optimizer/
-🎥 Demo Video: https://youtu.be/i5OKUtKLcIw
-📂 GitHub Repo: https://github.com/valarama/cementai-optimizer
-🎯 Problem Statement
-Challenge: Optimizing Cement Operations with Generative AI
-Cement plants are among the most energy-intensive industries in India, with complex, interlinked processes that demand constant balancing. Key operational challenges include:
-
-⚡ Energy Inefficiency: 60-70% operational efficiency with high kWh/ton consumption
-🏭 Process Variability: Raw material inconsistency, grinding inefficiencies, high-temperature clinkerization
-🌍 Environmental Impact: High CO₂ emissions (865 kg/ton average)
-📊 Siloed Control Systems: Reactive management instead of predictive optimization
-💰 Cost Pressures: Energy costs represent 30-40% of total operational expenses
+- [🌟 Live Demo](#-live-demo)
+- [🎯 Problem Statement](#-problem-statement)
+- [💡 Our Solution](#-our-solution)
+- [🚀 Core Features](#-core-features--capabilities)
+- [👤 User Journey](#-user-journey)
+- [🛠 Technical Architecture](#-technical-architecture)
+- [📊 Business Impact](#-business-impact--technical-kpis)
+- [🔧 How It Works](#-how-it-works)
+- [📈 Use Cases](#-use-cases)
+- [🚀 Quick Start](#-quick-start--deployment)
+- [📋 API Documentation](#-api-endpoints)
+- [🎓 Technologies Used](#-technologies-used)
+- [🗺️ Roadmap](#️-roadmap)
+- [❓ FAQ](#-faq)
+- [🤝 Contributing](#-contributing)
+- [👥 Team](#-team-agentic-architects)
+- [📄 License](#-license--usage)
+- [📞 Contact](#-contact--support)
 
 
 💡 Our Solution

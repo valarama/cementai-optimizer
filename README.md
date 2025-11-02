@@ -1,4 +1,5 @@
-markdown# 🏭 CementAI Optimizer
+markdown#
+🏭 CementAI Optimizer
 **World's First Generative AI Platform for Autonomous Cement Plant Operations**
 
 [![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/i5OKUtKLcIw)
@@ -8,6 +9,7 @@ markdown# 🏭 CementAI Optimizer
 **Team:** Agentic Architects  
 **Hackathon:** Google Cloud Gen AI Exchange Hackathon 2025  
 **Problem Statement:** Optimizing Cement Operations with Generative AI
+<img width="1024" height="1024" alt="image (13)" src="https://github.com/user-attachments/assets/58bf30ad-91da-419b-bed8-a963f6debb57" />
 
 ---
 
@@ -28,7 +30,8 @@ markdown# 🏭 CementAI Optimizer
 - [👥 Team](#-team)
 - [📞 Contact](#-contact)
 
----
+---<img width="1024" height="1024" alt="image (6)" src="https://github.com/user-attachments/assets/6bc394d9-cab0-444c-b179-91e294109b3a" />
+
 
 ## 🎯 The Problem
 
@@ -56,7 +59,8 @@ This fragmentation leads to:
 - Suboptimal alternative fuel usage
 - Delayed problem detection
 
----
+---<img width="1024" height="1024" alt="image (19)" src="https://github.com/user-attachments/assets/94cfee15-7cb5-4a3d-9a12-8dd0adfb09e2" />
+
 
 ## 💡 Our Solution
 
@@ -68,8 +72,10 @@ Our platform uses **Gemini Pro's multimodal AI** to:
 - ✅ Correlate cross-functional operations (raw materials → clinker → utilities → quality)
 - ✅ Generate actionable optimization strategies beyond traditional rule-based systems
 - ✅ Enable **autonomous, cross-process decision-making**
+<img width="848" height="478" alt="Screenshot 2025-11-02 200534" src="https://github.com/user-attachments/assets/ac7b99a0-108e-4fd9-a89a-a6d11f2b5d3a" />
 
----
+---<img width="1024" height="1024" alt="image (14)" src="https://github.com/user-attachments/assets/24a05f44-eb1b-40cf-9622-b0e02fbf8968" />
+
 
 ## 🤖 Why "Agentic AI"?
 
@@ -84,6 +90,7 @@ CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 5️⃣ Act → Agent updates controls within safety guardrails
 6️⃣ Measure → Savings (kWh/t, CO₂, ₹) displayed instantly
 ```
+<img width="946" height="473" alt="Screenshot 2025-11-02 184115" src="https://github.com/user-attachments/assets/acd925dd-c297-4750-b951-c8703b3be749" />
 
 ### Phased Autonomy
 - **Phase 1: Advisor Mode** (read-only recommendations)
@@ -97,6 +104,7 @@ CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 - 📌 **Audit trail:** Every action logged with reason + expected impact
 
 ---
+![Uploading image (9).png…]()
 
 ## 🏗️ What We Solve - Technical & Operational
 
@@ -112,6 +120,7 @@ CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 | Cooler temperature profile | Heat recovery from clinker | Determines recapture efficiency | Trigger grate cooler tuning |
 
 **Result:** 8-15% energy reduction in clinker production
+<img width="1187" height="884" alt="mermaid-diagram-2025-11-02-183416" src="https://github.com/user-attachments/assets/464b993e-e2b5-419b-a989-31ea4e2df637" />
 
 ---
 
@@ -127,6 +136,7 @@ CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 | Online fineness (Blaine) | Cement particle size | Too fine = wasted grinding | Predict & stabilize proactively |
 
 **Result:** 15% grinding energy reduction
+<img width="1024" height="1024" alt="image (16)" src="https://github.com/user-attachments/assets/4c9c8271-2a9d-4fbd-9a6b-a8e8b9554129" />
 
 ---
 
@@ -143,7 +153,8 @@ CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 
 **Result:** 25-40% reduction in emission incidents
 
----
+---<img width="1024" height="1024" alt="image (11)" src="https://github.com/user-attachments/assets/46e640e8-1187-41a8-933f-a098d21c06d6" />
+
 
 ## 🚀 Core Capabilities
 

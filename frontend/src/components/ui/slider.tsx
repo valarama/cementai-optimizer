@@ -1,0 +1,1 @@
+export function Slider({ value, onValueChange, max, step, className = "" }: any) { return <input type="range" value={value} onChange={(e) => onValueChange?.([Number(e.target.value)])} max={max} step={step} className={className} /> } 

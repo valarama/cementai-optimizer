@@ -1,0 +1,45 @@
+# CementAI Optimizer - Cloud Build Configuration
+steps:
+  # Step 1: Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/cementai-optimiser/cementai-backend:latest'
+      - '.'
+    id: 'build-image'
+
+  # Step 2: Push the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/cementai-optimiser/cementai-backend:latest'
+    id: 'push-image'
+
+  # Step 3: Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'cementai-backend'  # ✅ FIXED - correct service name
+      - '--image=gcr.io/cementai-optimiser/cementai-backend:latest'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+      - '--memory=1Gi'
+      - '--cpu=1'
+      - '--max-instances=10'
+      - '--port=8080'
+    id: 'deploy-cloud-run'
+
+# Container images to store
+images:
+  - 'gcr.io/cementai-optimiser/cementai-backend:latest'
+
+# Build options
+options:
+  machineType: 'N1_HIGHCPU_8'
+  logging: CLOUD_LOGGING_ONLY
+
+timeout: '1200s'

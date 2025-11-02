@@ -1,420 +1,484 @@
-🏭 CementAI Optimizer
-World's First Generative AI Platform for Autonomous Cement Plant Operations
+markdown# 🏭 CementAI Optimizer
+**World's First Generative AI Platform for Autonomous Cement Plant Operations**
 
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/i5OKUtKLcIw)
+[![Live Prototype](https://img.shields.io/badge/Live-Prototype-blue?style=for-the-badge)](https://valarama.github.io/cementai-optimizer/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/valarama/cementai-optimizer)
+
+**Team:** Agentic Architects  
+**Hackathon:** Google Cloud Gen AI Exchange Hackathon 2025  
+**Problem Statement:** Optimizing Cement Operations with Generative AI
+
+---
 
 ## 📑 Table of Contents
 
-- [🌟 Live Demo](#-live-demo)
-- [🎯 Problem Statement](#-problem-statement)
+- [🎯 The Problem](#-the-problem)
 - [💡 Our Solution](#-our-solution)
-- [🚀 Core Features](#-core-features--capabilities)
-- [👤 User Journey](#-user-journey)
-- [🛠 Technical Architecture](#-technical-architecture)
-- [📊 Business Impact](#-business-impact--technical-kpis)
-- [🔧 How It Works](#-how-it-works)
-- [📈 Use Cases](#-use-cases)
-- [🚀 Quick Start](#-quick-start--deployment)
-- [📋 API Documentation](#-api-endpoints)
-- [🎓 Technologies Used](#-technologies-used)
-- [🗺️ Roadmap](#️-roadmap)
-- [❓ FAQ](#-faq)
-- [🤝 Contributing](#-contributing)
-- [👥 Team](#-team-agentic-architects)
-- [📄 License](#-license--usage)
-- [📞 Contact](#-contact--support)
+- [🤖 Why "Agentic AI"?](#-why-agentic-ai)
+- [🏗️ What We Solve - Technical & Operational](#️-what-we-solve---technical--operational)
+- [🚀 Core Capabilities](#-core-capabilities)
+- [🛠️ Technical Architecture](#️-technical-architecture)
+- [📊 Business Impact & KPIs](#-business-impact--kpis)
+- [🔬 8 BQML Models](#-8-bqml-models)
+- [⚙️ OT Signal Coverage & Data Collection](#️-ot-signal-coverage--data-collection)
+- [🎓 Google Cloud Technologies](#-google-cloud-technologies)
+- [📈 Implementation Phases](#-implementation-phases)
+- [❓ Critical Question for Plant Readiness](#-critical-question-for-plant-readiness)
+- [👥 Team](#-team)
+- [📞 Contact](#-contact)
 
+---
 
-💡 Our Solution
-CementAI Optimizer is an intelligent, autonomous platform that transforms cement plant operations through advanced Generative AI capabilities, delivering unprecedented operational efficiency through Google Cloud's AI services.
-🔑 Key Innovation
-Our platform leverages Gemini Pro's multimodal AI capabilities to:
+## 🎯 The Problem
 
-Understand complex industrial processes
-Correlate cross-functional data streams
-Generate actionable optimization strategies that traditional rule-based systems cannot achieve
-Enable autonomous, cross-process decision-making
+Cement plants are among the most energy-intensive industries globally, facing critical operational challenges:
 
+### Industry Challenges
+- ⚡ **High Energy Costs:** 30-40% of operational expenses, with average specific energy consumption of 98 kWh/ton (India average)
+- 🔥 **Process Variability:** Raw material inconsistency, grinding inefficiencies, high-temperature clinkerization instability
+- 🌡️ **Heat Losses:** Stack temperatures often exceed optimal by 10-20°C, wasting recoverable energy
+- 💨 **Dust Control Issues:** Bag filter inefficiency leads to environmental compliance risks
+- 🏭 **Siloed Control Systems:** Isolated process monitoring prevents holistic optimization
+- ♻️ **Alternative Fuel Integration:** Limited thermal substitution rates (TSR) due to combustion complexity
+- 🌍 **Sustainability Pressure:** Cement industry contributes 5-8% of global CO₂ emissions
 
-🚀 Core Features & Capabilities
-1. ⚙️ Intelligent Raw Material Management
+### What Makes This Hard?
+Traditional cement plant control systems are **reactive and rule-based**, operating in silos across:
+- **Raw mill & grinding circuits**
+- **Kiln / preheater / cooler systems** 
+- **Bag filters & ESP (dust control)**
+- **Utilities (fans, compressors, conveyors)**
 
-Real-time feed composition analysis using Google Cloud Vision
-Predictive variability modeling with BigQuery ML
-Automated grinding parameter optimization
+This fragmentation leads to:
+- Wasted energy (15-25% optimization opportunity)
+- Quality inconsistency (20-30% variability in product)
+- Suboptimal alternative fuel usage
+- Delayed problem detection
 
-2. ⚡ Smart Energy Optimization
+---
 
-AI-driven clinkerization temperature control
-Predictive energy demand forecasting
-Cross-process energy balancing algorithms
-Result: 8-15% kWh/ton reduction
+## 💡 Our Solution
 
-3. 🏆 Quality Assurance Intelligence
+**CementAI Optimizer** is an intelligent, autonomous platform that revolutionizes cement plant operations through **Agentic AI** capabilities powered by Google Cloud.
 
-Real-time quality monitoring with Computer Vision
-Predictive quality deviation detection
-Automated correction recommendations
-Result: 20-30% lower quality variability
+### Key Innovation
+Our platform uses **Gemini Pro's multimodal AI** to:
+- ✅ Understand complex industrial processes across multiple data streams
+- ✅ Correlate cross-functional operations (raw materials → clinker → utilities → quality)
+- ✅ Generate actionable optimization strategies beyond traditional rule-based systems
+- ✅ Enable **autonomous, cross-process decision-making**
 
-4. 🌱 Sustainability Maximizer
+---
 
-Alternative fuel optimization engine
-Carbon footprint tracking and reduction
-Thermal substitution rate (TSR) optimization
-Result: 20-30% CO₂ reduction
+## 🤖 Why "Agentic AI"?
 
-5. 📊 Unified Plant Intelligence
+CementAI Optimizer is **Agentic AI** — it doesn't just monitor, **it acts**.
 
-Cross-process data fusion and analysis
-Autonomous decision-making capabilities
-Predictive maintenance scheduling
-Result: From 60-70% to 85-90% efficiency
+### Agentic AI Workflow
+```
+1️⃣ Observe → Real-time OT signals (kiln, mills, fans, stack, filters, utilities)
+2️⃣ Predict → AI models forecast energy waste, emissions, quality drift
+3️⃣ Decide → Gemini recommends optimal set-point adjustments
+4️⃣ Approve → Operator reviews & approves in dashboard (semi-auto mode)
+5️⃣ Act → Agent updates controls within safety guardrails
+6️⃣ Measure → Savings (kWh/t, CO₂, ₹) displayed instantly
+```
 
-6. 🔄 Continuous Learning System
+### Phased Autonomy
+- **Phase 1: Advisor Mode** (read-only recommendations)
+- **Phase 2: Semi-Auto** (operator approval + narrow control)  
+- **Phase 3: Closed-Loop** (autonomous within guardrails + auto-rollback)
 
-Plant-specific performance optimization
-Historical data pattern recognition
-Adaptive control strategy refinement
+### Why Operators Trust It
+- 📌 **Transparent reasoning:** "Why this change?" explained by Gemini
+- 📌 **Bounded actions:** Hard limits, interlocks, cooldowns
+- 📌 **Rollback on failure:** Auto-reverses if KPIs deteriorate
+- 📌 **Audit trail:** Every action logged with reason + expected impact
 
-👤 User Journey
-<img width="1187" height="884" alt="mermaid-diagram-2025-11-02-183416" src="https://github.com/user-attachments/assets/f2c03347-9e5d-47fd-93d6-a10a1dbc794f" />
+---
 
+## 🏗️ What We Solve - Technical & Operational
 
-🛠 Technical Architecture
-Core AI Services (100% Google Cloud)
-<img width="1024" height="1024" alt="image (13)" src="https://github.com/user-attachments/assets/12a723af-0367-4a12-abe0-e8748a2145e5" />
+### 1️⃣ Kiln / Preheater / Cooler (Clinkerization)
+**The biggest energy consumer** — where raw meal becomes clinker at 1400-1500°C.
 
+| **OT Signal** | **What It Is** | **Why It Matters** | **CementAI Action** |
+|---------------|----------------|-------------------|---------------------|
+| Kiln inlet/outlet temperature | Heat entering/leaving kiln | Shows heat efficiency + clinker quality | Adjust fuel/airflow to reduce waste |
+| Preheater stage temps | Heat transfer gas → raw meal | Poor transfer = heat to chimney | Optimize ID/PA/SA fans + calcination |
+| ID/PA/SA fan speed & power | Draft control fans | Too high = huge power waste | Lower fan speed within safe draft |
+| Draft / pressure | Negative pressure in kiln | Keeps flame stable, avoids dust escape | Calibrate airflow for stability |
+| Cooler temperature profile | Heat recovery from clinker | Determines recapture efficiency | Trigger grate cooler tuning |
 
-8 BQML Models (BigQuery ML)
+**Result:** 8-15% energy reduction in clinker production
 
-<img width="946" height="473" alt="Screenshot 2025-11-02 184115" src="https://github.com/user-attachments/assets/7ede011b-20ee-45f3-8cf8-47f242e520b8" />
+---
 
+### 2️⃣ Finish Mill / Raw Mill (Grinding)
+**30-40% of total plant power** — grinding clinker + additives to fine powder.
 
-### **8 BQML Models (BigQuery ML)**
+| **OT Signal** | **What It Is** | **Why It Matters** | **CementAI Action** |
+|---------------|----------------|-------------------|---------------------|
+| Mill load | Material inside mill | Too much/little = inefficient | Maintain optimal fill level |
+| Feed rate | Input flow | Controls throughput + energy/ton | Balance feed for quality + energy |
+| Mill power (kW) | Real-time power usage | Direct cost driver | Detect inefficiency, suggest lower set-points |
+| Separator speed | Controls fineness (Blaine) | High speed = more energy | Optimize for required quality only |
+| Online fineness (Blaine) | Cement particle size | Too fine = wasted grinding | Predict & stabilize proactively |
 
-| # | Model Name | Purpose |
-|---|------------|---------|
-| 1️⃣ | **energy_regressor** | Energy consumption prediction & optimization |
-| 2️⃣ | **quality_predictor** | Cement quality prediction (Blaine, strength, LSF/SM/AM) |
-| 3️⃣ | **pm_risk_classifier** | Dust emission risk classification |
-| 4️⃣ | **tsr_optimizer** | Thermal substitution rate & alternative fuel optimization |
-| 5️⃣ | **maintenance_predictor** | Predictive maintenance & failure risk |
-| 6️⃣ | **heat_loss_regressor** | Stack & cooler heat loss prediction for WHR |
-| 7️⃣ | **mill_optimizer** | Grinding circuit optimization |
-| 8️⃣ | **throughput_forecaster** | Production rate forecasting |
+**Result:** 15% grinding energy reduction
 
-### **8 BQML Models (BigQuery ML)**
+---
 
-<details>
-<summary><b>1️⃣ energy_regressor</b> — Energy consumption prediction & optimization</summary>
-<br>
+### 3️⃣ Bag Filters / ESP (Dust Control)
+**Prevents dust emissions** + regulatory compliance.
 
-**Type:** Boosted Tree Regressor  
-**Features:** Feed rate, mill power, fan speeds, kiln temps, AF%  
-**Output:** `predicted_energy_kwh_per_ton`  
-**Impact:** 8-15% energy reduction  
+| **OT Signal** | **What It Is** | **Why It Matters** | **CementAI Action** |
+|---------------|----------------|-------------------|---------------------|
+| DP (differential pressure) | Flow resistance through filter | Low DP + high dust = leak | Predict bag cleaning/replacement |
+| Reverse-cycle timing | Bag cleaning cycles | Over-clean = air waste | Auto-adjust cycle duration |
+| ESP load / rapping | Electrostatic precipitator activity | Too low = dust escape | Balance rapping + voltage |
+| Stack temperature | Heat going to sky | Higher T = energy lost | Trigger WHR + airflow optimization |
+| Stack PM / opacity | Dust emissions | Regulatory limit | Alert + control adjustments |
 
-</details>
+**Result:** 25-40% reduction in emission incidents
 
-<details>
-<summary><b>2️⃣ quality_predictor</b> — Cement quality prediction (Blaine, strength, LSF/SM/AM)</summary>
-<br>
+---
 
-**Type:** DNN Regressor  
-**Features:** Raw mix chemistry, clinker temp, fineness  
-**Output:** `predicted_strength_mpa_28d`  
-**Impact:** 20-30% quality variance reduction  
+## 🚀 Core Capabilities
 
-</details>
+### 1. ⚙️ Intelligent Raw Material Management
+- Real-time feed composition analysis using **Cloud Vision API**
+- Predictive variability modeling with **BigQuery ML**
+- Automated grinding parameter optimization
 
-<details>
-<summary><b>3️⃣ pm_risk_classifier</b> — Dust emission risk classification</summary>
-<br>
+### 2. ⚡ Smart Energy Optimization
+- AI-driven clinkerization temperature control
+- Predictive energy demand forecasting
+- Cross-process energy balancing algorithms
+- **Result:** 8-15% kWh/ton reduction
 
-**Type:** Logistic Regression  
-**Features:** Bag filter DP, ESP load, stack temp  
-**Output:** `pm_exceed_probability` (0-1)  
-**Impact:** 25-40% emission incident reduction  
+### 3. 🏆 Quality Assurance Intelligence
+- Real-time quality monitoring with **Computer Vision**
+- Predictive quality deviation detection
+- Automated correction recommendations
+- **Result:** 20-30% lower quality variability
 
-</details>
+### 4. 🌱 Sustainability Maximizer
+- Alternative fuel optimization engine
+- Carbon footprint tracking & reduction
+- Thermal substitution rate (TSR) optimization
+- **Result:** +5-10pp TSR increase, 20-30% CO₂ reduction
 
-<details>
-<summary><b>4️⃣ tsr_optimizer</b> — Thermal substitution rate & alternative fuel optimization</summary>
-<br>
+### 5. 📊 Unified Plant Intelligence
+- Cross-process data fusion (raw → clinker → utilities)
+- Autonomous decision-making via **Agent Builder**
+- Predictive maintenance scheduling
+- **Result:** 85-90% operational efficiency (up from 60-70%)
 
-**Type:** Linear Regression  
-**Features:** Fuel CV, moisture, current TSR  
-**Output:** `optimal_alt_fuel_pct`  
-**Impact:** +5-10pp TSR increase  
+### 6. 🔄 Continuous Learning System
+- Plant-specific performance optimization
+- Historical data pattern recognition
+- Adaptive control strategy refinement
 
-</details>
+---
 
-<details>
-<summary><b>5️⃣ maintenance_predictor</b> — Predictive maintenance & failure risk</summary>
-<br>
+## 🛠️ Technical Architecture
 
-**Type:** XGBoost Classifier  
-**Features:** Vibration, bearing temps, runtime  
-**Output:** `failure_prob_next_48h`  
-**Impact:** 75% downtime reduction  
+### System Architecture
+```
+┌─────────────────────────────────────────────────────────────┐
+│                  CementAI Platform (GCP)                     │
+│  ┌──────────┐  ┌──────────┐  ┌─────────────┐  ┌──────────┐ │
+│  │ Gemini   │  │ Vertex   │  │   Agent     │  │ BigQuery │ │
+│  │   Pro    │  │    AI    │  │  Builder    │  │    ML    │ │
+│  └──────────┘  └──────────┘  └─────────────┘  └──────────┘ │
+└─────────────────────────────────────────────────────────────┘
+                              ▲
+                              │
+┌─────────────────────────────┼─────────────────────────────┐
+│              Data & Vision Layer                           │
+│  ┌──────────┐  ┌──────────┐  ┌─────────────┐             │
+│  │  Cloud   │  │ Pub/Sub  │  │    Cloud    │             │
+│  │  Vision  │  │(Streaming)│  │  Storage    │             │
+│  └──────────┘  └──────────┘  └─────────────┘             │
+└────────────────────────────────────────────────────────────┘
+                              ▲
+                              │
+┌─────────────────────────────┼─────────────────────────────┐
+│              Edge Gateway (OT → Cloud)                      │
+│         OPC UA / Modbus → MQTT → Pub/Sub                   │
+└────────────────────────────────────────────────────────────┘
+                              ▲
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│                    Cement Plant (OT Layer)                  │
+│  Kiln | Mills | Fans | Stack | Filters | Utilities         │
+│  PLCs | DCS | SCADA | Sensors | Actuators                  │
+└─────────────────────────────────────────────────────────────┘
+```
 
-</details>
+### Data Flow Architecture
+```
+Plant Sensors → Edge Gateway → Pub/Sub → Dataflow → BigQuery
+                                                        ↓
+                                              ┌─────────────────┐
+                                              │  8 BQML Models  │
+                                              └─────────────────┘
+                                                        ↓
+                                              Gemini Agent (Decision)
+                                                        ↓
+                                              Operator Dashboard
+                                                        ↓
+                                              Control System Write-Back
+```
 
-<details>
-<summary><b>6️⃣ heat_loss_regressor</b> — Stack & cooler heat loss prediction for WHR</summary>
-<br>
+---
 
-**Type:** Linear Regression  
-**Features:** Stack temp, gas flow, O₂%  
-**Output:** `recoverable_heat_kw`  
-**Impact:** 10-20°C temp reduction  
+## 📊 Business Impact & KPIs
 
-</details>
+### Technical KPIs Directly Improved
 
-<details>
-<summary><b>7️⃣ mill_optimizer</b> — Grinding circuit optimization</summary>
-<br>
+| KPI | Current (India Avg) | CementAI Target | Improvement |
+|-----|---------------------|----------------|-------------|
+| ⚡ Electrical Energy | 98 kWh/t | 88 kWh/t | **-10.2%** |
+| 🔥 Thermal Energy | 750 kcal/kg | 710 kcal/kg | **-5.3%** |
+| 🌿 CO₂ Emissions | 865 kg/t | 745 kg/t | **-13.9%** |
+| 📈 Production Rate | 410 TPH | 445 TPH | **+8.5%** |
+| ♻️ Alternative Fuel TSR | 12% | 18% | **+50%** |
+| 🏆 Cement Strength | 42.5 MPa | 45.2 MPa | **+6.4%** |
+| ⚙️ OEE (Overall Equipment Effectiveness) | 72% | 85% | **+18%** |
+| ☁️ ESP Efficiency | 98.5% | 99.7% | **+1.2%** |
 
-**Type:** Boosted Tree Regressor  
-**Features:** Mill load, separator speed, feed rate  
-**Output:** `optimal_setpoints` (JSON)  
-**Impact:** 15% grinding energy reduction  
+### Financial Impact (Per Plant)
 
-</details>
+- 💰 **Year 1 Savings:** $2.5M (15% energy + quality improvements)
+- 💰 **Year 1-5 Total:** $12.5M+
+- 📈 **ROI:** 400%+ over 5 years
+- ⏱ **Payback Period:** 8-10 months
 
-<details>
-<summary><b>8️⃣ throughput_forecaster</b> — Production rate forecasting</summary>
-<br>
+### Environmental Impact
 
-**Type:** ARIMA Plus  
-**Features:** Historical TPH, raw mix, fuel  
-**Output:** `predicted_tph_next_hour`  
-**Impact:** 8.5% throughput increase  
+- 🌍 **CO₂ Reduction:** 140-160 tons/day per plant
+- ♻️ **TSR Increase:** +5-10 percentage points
+- 🌱 **Renewable Integration:** Optimized biomass usage
 
-</details>
+---
 
-### 📊 Querying BQML Model Status
+## 🔬 8 BQML Models
 
-Use this BigQuery SQL query to list all 8 production BQML models, their purposes, creation dates, and status. Run it in the BigQuery console or via the backend API for real-time monitoring.
+Our solution uses **8 production-ready BigQuery ML models** for real-time optimization:
+
+### Model Overview
+
+| # | Model Name | Type | Purpose | Impact |
+|---|------------|------|---------|--------|
+| 1️⃣ | `energy_regressor` | Boosted Tree | Energy kWh/t prediction | 8-15% reduction |
+| 2️⃣ | `quality_predictor` | DNN | Cement quality (Blaine, strength) | 20-30% variance ↓ |
+| 3️⃣ | `pm_risk_classifier` | Logistic Reg | Dust emission risk | 25-40% incidents ↓ |
+| 4️⃣ | `tsr_optimizer` | Linear Reg | Alt fuel % optimization | +5-10pp TSR |
+| 5️⃣ | `maintenance_predictor` | XGBoost | Equipment failure prediction | 75% downtime ↓ |
+| 6️⃣ | `heat_loss_regressor` | Linear Reg | Stack/cooler heat loss | 10-20°C reduction |
+| 7️⃣ | `mill_optimizer` | Boosted Tree | Grinding circuit optimization | 15% energy ↓ |
+| 8️⃣ | `throughput_forecaster` | ARIMA Plus | Production rate forecasting | +8.5% TPH |
+
+### Example: Energy Regressor Model
 ```sql
-WITH model_list AS (
-  SELECT 
-    table_name AS model_name, 
-    creation_time 
-  FROM 
-    `cementai-optimiser.cement_plant.INFORMATION_SCHEMA.TABLES` 
-  WHERE 
-    table_type = 'MODEL'
-)
+CREATE OR REPLACE MODEL `ops.energy_regressor`
+OPTIONS(
+  model_type='BOOSTED_TREE_REGRESSOR',
+  input_label_cols=['energy_kwh_per_ton']
+) AS
+SELECT
+  feed_rate_tph, mill_power_kw, id_fan_speed_pct, af_pct,
+  kiln_outlet_t_c, stack_temp_c, dp_bagfilter_kpa,
+  roll5m_power_kw, roll1h_power_kw
+FROM `dataset.plant_features`
+WHERE event_time < TIMESTAMP('2025-10-20');
+```
+
+### Querying Model Status
+```sql
 SELECT 
-  model_name, 
-  CASE model_name 
-    WHEN 'energy_regressor' THEN 'Optimize kWh/t consumption' 
-    WHEN 'quality_predictor' THEN 'Predict cement strength (MPa)' 
-    WHEN 'pm_risk_classifier' THEN 'Detect dust emission risks' 
-    WHEN 'tsr_optimizer' THEN 'Maximize alternative fuels' 
-    WHEN 'maintenance_predictor' THEN 'Predict equipment failures' 
-    WHEN 'heat_loss_regressor' THEN 'Minimize thermal losses' 
-    WHEN 'mill_optimizer' THEN 'Improve grinding efficiency' 
-    WHEN 'throughput_forecaster' THEN 'Forecast production TPH' 
-    ELSE 'Unknown' 
-  END AS purpose, 
-  FORMAT_TIMESTAMP('%Y-%m-%d %H:%M', creation_time) AS created_date, 
-  'PRODUCTION' AS status 
-FROM 
-  model_list 
-ORDER BY 
-  model_name;
-```
-
-**Example Output:**
-
-| model_name | purpose | created_date | status |
-|-----------|---------|--------------|--------|
-| energy_regressor | Optimize kWh/t consumption | 2025-10-29 10:10 | PRODUCTION |
-| heat_loss_regressor | Minimize thermal losses | 2025-10-29 10:15 | PRODUCTION |
-| maintenance_predictor | Predict equipment failures | 2025-10-29 10:20 | PRODUCTION |
-| mill_optimizer | Improve grinding efficiency | 2025-10-29 10:25 | PRODUCTION |
-| pm_risk_classifier | Detect dust emission risks | 2025-10-29 10:30 | PRODUCTION |
-| quality_predictor | Predict cement strength (MPa) | 2025-10-29 10:35 | PRODUCTION |
-| throughput_forecaster | Forecast production TPH | 2025-10-29 10:40 | PRODUCTION |
-| tsr_optimizer | Maximize alternative fuels | 2025-10-29 10:45 | PRODUCTION |
-
-Data Flow Architecture
-<img width="1024" height="1024" alt="image (11)" src="https://github.com/user-attachments/assets/7a804939-cab8-463d-b5dd-c23dba2a305a" />
-
-
-Business Impact & Technical KPIs
-Proven Results
-KPI,Current (India Avg),CementAI Target,Improvement
-⚡ Electrical Energy,98 kWh/t,88 kWh/t,-10.2%
-🔥 Thermal Energy,750 kcal/kg,710 kcal/kg,-5.3%
-🌿 CO₂ Emissions,865 kg/t,745 kg/t,-13.9%
-📈 Production Rate,410 TPH,445 TPH,+8.5%
-♻️ Alternative Fuel Rate,12%,18%,+50%
-🏆 Cement Strength,42.5 MPa,45.2 MPa,+6.4%
-⚙️ Overall Equipment Effectiveness,72%,85%,+18%
-☁️ ESP Efficiency,98.5%,99.7%,+1.2%
-
-inancial Impact (Per Plant)
-
-💰 Year 1 Savings: $2.5M (15% energy reduction + quality improvements)
-💰 Year 1-5 Total Savings: $12.5M+
-📈 ROI: 400%+ over 5 years
-⏱ Payback Period: 8-10 months
-
-Environmental Impact
-
-🌍 CO₂ Reduction: 140-160 tons/day per plant
-♻️ TSR Increase: +5-10 percentage points
-🌱 Renewable Energy Integration: Optimized biomass usage
-
-
-🏗 How It Solves the Problem
-Traditional vs. CementAI Approach
-
-
-
-<img width="1024" height="1024" alt="image (6)" src="https://github.com/user-attachments/assets/26ea1166-2356-4d71-b5cb-f13a84e5bf99" />
-
-
-
-
-
-
-
-
-<img width="4096" height="4096" alt="image (8)" src="https://github.com/user-attachments/assets/ffb5bfe5-6290-4e9e-8176-82bf68f59101" />
-
-
-
-
-
-
-
-<img width="1187" height="884" alt="mermaid-diagram-2025-11-02-201411" src="https://github.com/user-attachments/assets/b0a0d884-9e0f-493e-90c6-c7abf54d3885" />
-
-
-### **3. Deploy Frontend (Next.js)**
-```bash
-cd ../frontend
-# Replace page.tsx with the FIXED version
-# Then deploy:
-gcloud builds submit --config=cloudbuild-frontend.yaml .
-```
-
-### **4. Access the Dashboard**
-
-- **Frontend:** `https://cementai-frontend-[PROJECT_ID].run.app`
-- **Backend API:** `https://cementai-backend-[PROJECT_ID].run.app`
-
----
-
-## 📋 API Endpoints
-
-### **Core Prediction Endpoint**
-```bash
-POST /api/predict-comprehensive
-Content-Type: application/json
-
-{
-  "feed_rate_tph": 850,
-  "kiln_outlet_temp_c": 1420,
-  "mill_power_kw": 4200,
-  "tsr_pct": 48
-}
-```
-
-**Response:** Predictions from all 8 BQML models + AI recommendations + total savings
-
----
-
-### **Gemini Chat Endpoint**
-```bash
-POST /api/chat
-Content-Type: application/json
-
-{
-  "message": "How can I reduce energy consumption?",
-  "context": { "current_predictions": {...} }
-}
+  table_name AS model_name,
+  CASE table_name
+    WHEN 'energy_regressor' THEN 'Optimize kWh/t'
+    WHEN 'quality_predictor' THEN 'Predict cement strength'
+    WHEN 'pm_risk_classifier' THEN 'Detect dust emission risks'
+    WHEN 'tsr_optimizer' THEN 'Maximize alternative fuels'
+    WHEN 'maintenance_predictor' THEN 'Predict equipment failures'
+    WHEN 'heat_loss_regressor' THEN 'Minimize thermal losses'
+    WHEN 'mill_optimizer' THEN 'Improve grinding efficiency'
+    WHEN 'throughput_forecaster' THEN 'Forecast production TPH'
+  END AS purpose,
+  FORMAT_TIMESTAMP('%Y-%m-%d', creation_time) AS created,
+  'PRODUCTION' AS status
+FROM `cementai-optimiser.cement_plant.INFORMATION_SCHEMA.TABLES`
+WHERE table_type = 'MODEL'
+ORDER BY model_name;
 ```
 
 ---
 
-### **Health & Status**
-```bash
-GET /health
-GET /api/plant-status
-GET /api/models/status
+## ⚙️ OT Signal Coverage & Data Collection
+
+### What is OT (Operational Technology)?
+
+**OT** refers to hardware and control systems that run physical plant operations:
+- PLCs (Programmable Logic Controllers)
+- DCS (Distributed Control System)
+- SCADA systems
+- Industrial sensors & actuators
+- Process safety interlocks
+
+**OT vs IT:**
+- **OT** → Controls physical reality (kiln temps, fan speeds, dust)
+- **IT** → Manages information (ERP, emails, databases)
+
+### Priority OT Signals We Capture
+
+#### 🔥 Kiln / Preheater / Cooler
+- Kiln inlet/outlet temperatures
+- Preheater stage temperatures
+- ID/PA/SA fan speed & power
+- Draft / pressure
+- Cooler temperature profile
+
+#### ⚙️ Finish Mill / Raw Mill
+- Mill load & feed rate
+- Mill power (kW)
+- Separator speed
+- Blaine / fineness (online)
+
+#### ☁️ Bag Filters / ESP
+- DP (differential pressure) across bags
+- Reverse-cycle timing
+- ESP load / rapping frequency
+- Stack temperature & PM / opacity
+
+#### 🔧 Utilities
+- Compressor power & pressure
+- Conveyor loads
+- Crusher motor starts/trips
+
+### Signal Coverage Metric
+```
+Coverage % = (# signals with 1-5 min real-time feed) / (# required signals) × 100
+```
+
+**Targets:**
+- Week 2: ≥70%
+- Week 6: ≥90%
+
+### Data Collection Plan
+```
+Edge Gateway (OPC UA/Modbus)
+      ↓
+Pub/Sub (MQTT over TLS)
+      ↓
+Dataflow (stream processing)
+      ↓
+BigQuery (partitioned, clustered)
+      ↓
+BQML Feature Store
 ```
 
 ---
 
-## 💾 Project Structure
-```
-cementai-optimizer/
-├── frontend/              # Next.js dashboard
-│   ├── src/app/page.tsx  # Main UI component (FIXED VERSION)
-│   ├── Dockerfile
-│   └── cloudbuild-frontend.yaml
-├── backend/               # FastAPI + BQML
-│   ├── main.py           # 8 BQML models + Gemini integration
-│   ├── requirements.txt
-│   └── cloudbuild.yaml
-├── deployment/            # Infrastructure
-│   └── terraform/
-└── README.md             # This file
-```
+## 🎓 Google Cloud Technologies
+
+### Core AI Services
+
+| Service | Purpose |
+|---------|---------|
+| **Gemini Pro 2.0 Flash** | Multimodal AI for process reasoning & explanations |
+| **Vertex AI** | Custom ML models for plant-specific optimization |
+| **BigQuery ML** | 8 production BQML models (energy, quality, TSR, etc.) |
+| **Agent Builder** | Autonomous decision-making agents |
+| **Cloud Vision API** | Equipment monitoring & quality control |
+
+### Data & Infrastructure
+
+| Service | Purpose |
+|---------|---------|
+| **Pub/Sub** | Real-time sensor data streaming (MQTT → Cloud) |
+| **Dataflow** | Stream processing & transformation |
+| **BigQuery** | Petabyte-scale analytics + ML feature store |
+| **Cloud Storage** | Data lake for historical analysis |
+| **Cloud Run** | Serverless deployment (backend + frontend) |
+
+### Security & Monitoring
+
+| Service | Purpose |
+|---------|---------|
+| **IAM** | Role-based access control |
+| **Cloud Logging** | Comprehensive audit trails |
+| **Cloud Monitoring** | Real-time system health & alerting |
 
 ---
 
-## 🎓 Technologies Used
+## 📈 Implementation Phases
 
-### **Google Cloud AI Stack**
+### Phase 0: Discovery & Data Readiness (2-4 weeks)
+- Map OT/PLC data streams
+- Assess data quality & sensor gaps
+- Establish baseline KPIs (kWh/ton, quality variance)
 
-- **Gemini Pro 2.0 Flash:** Multimodal AI for process understanding & reasoning
-- **Vertex AI:** Custom ML models for plant-specific optimization
-- **BigQuery ML:** 8 production-ready BQML models
-- **Agent Builder:** Autonomous decision-making agents
-- **Cloud Vision API:** Equipment monitoring & quality control
+### Phase 1: Advisor Mode (4-8 weeks)
+- Build ingestion pipelines (edge → Pub/Sub → BigQuery)
+- Train 8 BQML models
+- Deploy dashboard with recommendations (read-only)
 
-### **Data & Infrastructure**
+### Phase 2: Semi-Auto Mode (8-16 weeks)
+- Implement decision agent with operator approval
+- Limited control write-back with guardrails
+- Monitor KPIs & rollback logic
 
-- **Pub/Sub:** Real-time sensor data streaming
-- **Dataflow:** Stream processing & transformation
-- **BigQuery:** Petabyte-scale analytics
-- **Cloud Storage:** Data lake for historical analysis
-- **Cloud Run:** Serverless deployment (backend + frontend)
-
-### **Security & Monitoring**
-
-- **IAM:** Role-based access control
-- **Cloud Logging:** Comprehensive audit trails
-- **Cloud Monitoring:** Real-time system health
+### Phase 3: Autonomous Mode & Scale-Out (3-12 months)
+- Closed-loop control across lines/plants
+- Alternative fuel optimization at scale
+- Continuous model retraining & MLOps
 
 ---
 
-## 🌐 Market Opportunity
+## ❓ Critical Question for Plant Readiness
 
-- 🏭 **Global Cement Market:** $400B+ with high energy intensity
-- 🌍 **Carbon Pressure:** Net-zero urgency worldwide
-- 📈 **Digital Transformation:** Industry primed for AI adoption
-- 💰 **Energy Savings:** 15-25% = millions saved per plant
+### The One Question That Decides Everything
+
+> **"What percentage of energy-relevant OT signals — kiln, mills, fans, stack, bag filters, utilities — are currently available in real time for AI optimization, and where are the blind spots?"**
+
+### Why This Matters
+
+✅ Determines deployment speed  
+✅ Defines Advisor vs Semi-Auto start  
+✅ Quantifies first savings milestone
+
+### Decision Framework
+
+🟢 **If signals ≥ 70%** → Semi-Auto in Weeks 4-6  
+🟡 **If signals < 70%** → Advisor mode + data readiness fixes in parallel
 
 ---
 
-## 👥 Team: Agentic Architects
+## 👥 Team
 
+**Team Name:** Agentic Architects  
 **Team Lead:** Ramamurthy Valavandan  
-**Email:** ramamurthy.valavandan@mastechdigital.com
+**Email:** ramamurthy.valavandan@mastechdigital.com  
+
+**Hackathon:** Google Cloud Gen AI Exchange Hackathon 2025  
+**Problem Statement:** Optimizing Cement Operations with Generative AI
 
 ---
 
-## 📄 License & Usage
+## 📞 Contact
 
-This project is submitted for the **Google Cloud Gen AI Exchange Hackathon 2025**.  
-© 2025 Agentic Architects. All rights reserved.
+For questions, partnerships, or pilot deployments:
+
+📧 **Email:** ramamurthy.valavandan@mastechdigital.com  
+🌐 **Demo:** [https://valarama.github.io/cementai-optimizer/](https://valarama.github.io/cementai-optimizer/)  
+📹 **Video:** [https://youtu.be/i5OKUtKLcIw](https://youtu.be/i5OKUtKLcIw)  
+💻 **GitHub:** [https://github.com/valarama/cementai-optimizer](https://github.com/valarama/cementai-optimizer)
 
 ---
 
@@ -427,28 +491,15 @@ Special thanks to:
 
 ---
 
-## 📞 Contact & Support
-
-For questions, partnerships, or pilot deployments:
-
-- 📧 **Email:** ramamurthy.valavandan@mastechdigital.com
-- 🔗 **LinkedIn:** [Connect with team]
-- 🌐 **Website:** [Coming soon]
-
----
-
 <div align="center">
 
 **Built with ❤️ using Google Cloud Gen AI**
 
-**#GenAI #GoogleCloud #GeminiPro #VertexAI #IndustrialAI #CementIndustry #Sustainability #SmartManufacturing #Hackathon #AIForGood**
+**#GenAI #GoogleCloud #GeminiPro #VertexAI #IndustrialAI #CementIndustry #Sustainability #SmartManufacturing**
 
 [![Star on GitHub](https://img.shields.io/github/stars/valarama/cementai-optimizer?style=for-the-badge)](https://github.com/valarama/cementai-optimizer)
-[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/i5OKUtKLcIw)
 
 **⭐ Star this repo if you found it helpful!**
-
-</div>
 
 ---
 
@@ -456,123 +507,6 @@ For questions, partnerships, or pilot deployments:
 **Version:** 1.0.0  
 **Status:** Hackathon Submission - Prototype Phase
 
-
-
-AspectTraditional SystemsCementAI OptimizerDecision MakingRule-based, reactiveAI-powered, predictiveData IntegrationSiloed processesUnified cross-process intelligenceOptimizationManual, periodicAutonomous, continuousLearningStatic rulesAdaptive ML modelsAlternative FuelsLimited, conservativeOptimized, maximizedQuality ControlReactive correctionsProactive predictions
-Differentiators
-✅ Industry-First GenAI: Advanced AI specifically for cement manufacturing
-✅ Holistic Optimization: End-to-end process efficiency, not point solutions
-✅ Autonomous Operation: Lower human error, higher reliability
-✅ Sustainability Focus: Built-in carbon reduction & alt. fuel optimization
-✅ Google Cloud Native: Vertex AI, BigQuery, Gemini Pro integration
-🚀 Quick Start & Deployment
-Prerequisites
-
-Google Cloud account with billing enabled
-Project ID: cementai-optimiser (or your project)
-APIs enabled: Vertex AI, BigQuery, Cloud Run, Cloud Build, Pub/Sub
-
-1. Clone Repository
-bashgit clone https://github.com/valarama/cementai-optimizer.git
-cd cementai-optimizer
-2. Deploy Backend (FastAPI + BQML)
-bashcd backend
-gcloud builds submit --config=cloudbuild.yaml .
-3. Deploy Frontend (Next.js)
-bashcd ../frontend
-# Replace page.tsx with the FIXED version
-# Then deploy:
-gcloud builds submit --config=cloudbuild-frontend.yaml .
-4. Access the Dashboard
-Frontend: https://cementai-frontend-[PROJECT_ID].run.app
-Backend API: https://cementai-backend-[PROJECT_ID].run.app
-📋 API Endpoints
-Core Prediction Endpoint
-bashPOST /api/predict-comprehensive
-Content-Type: application/json
-{
-  "feed_rate_tph": 850,
-  "kiln_outlet_temp_c": 1420,
-  "mill_power_kw": 4200,
-  "tsr_pct": 48,
-  ...
-}
-Response: Predictions from all 8 BQML models + AI recommendations + total savings
-Gemini Chat Endpoint
-bashPOST /api/chat
-Content-Type: application/json
-{
-  "message": "How can I reduce energy consumption?",
-  "context": { "current_predictions": {...} }
-}
-Health & Status
-bashGET /health
-GET /api/plant-status
-GET /api/models/status
-
-💾 Project Structure
-textcementai-optimizer/
-├── frontend/ # Next.js dashboard
-│ ├── src/app/page.tsx # Main UI component (FIXED VERSION)
-│ ├── Dockerfile
-│ └── cloudbuild-frontend.yaml
-├── backend/ # FastAPI + BQML
-│ ├── main.py # 8 BQML models + Gemini integration
-│ ├── requirements.txt
-│ └── cloudbuild.yaml
-├── deployment/ # Infrastructure
-│ └── terraform/
-└── README.md # This file
-
-🎓 Technologies Used
-Google Cloud AI Stack
-
-Gemini Pro 2.0 Flash: Multimodal AI for process understanding & reasoning
-Vertex AI: Custom ML models for plant-specific optimization
-BigQuery ML: 8 production-ready BQML models
-Agent Builder: Autonomous decision-making agents
-Cloud Vision API: Equipment monitoring & quality control
-
-Data & Infrastructure
-
-Pub/Sub: Real-time sensor data streaming
-Dataflow: Stream processing & transformation
-BigQuery: Petabyte-scale analytics
-Cloud Storage: Data lake for historical analysis
-Cloud Run: Serverless deployment (backend + frontend)
-
-Security & Monitoring
-
-IAM: Role-based access control
-Cloud Logging: Comprehensive audit trails
-Cloud Monitoring: Real-time system health
-
-
-🌐 Market Opportunity
-
-🏭 Global Cement Market: $400B+ with high energy intensity
-🌍 Carbon Pressure: Net-zero urgency worldwide
-📈 Digital Transformation: Industry primed for AI adoption
-💰 Energy Savings: 15-25% = millions saved per plant
-
-
-👥 Team: Agentic Architects
-Team Lead: Ramamurthy Valavandan
-Email: ramamurthy.valavandan@mastechdigital.com
-📄 License & Usage
-This project is submitted for the Google Cloud Gen AI Exchange Hackathon 2025.
 © 2025 Agentic Architects. All rights reserved.
-🙏 Acknowledgments
-Special thanks to:
 
-Google Cloud team for Gen AI Exchange Hackathon platform
-Cement industry experts for domain guidance
-Hack2Skill for organizing this innovation challenge
-
-
-📞 Contact & Support
-For questions, partnerships, or pilot deployments:
-
-📧 Email: ramamurthy.valavandan@mastechdigital.com
-
-
+</div>
